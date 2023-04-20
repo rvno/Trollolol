@@ -1,0 +1,76 @@
+html,
+body,
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: skyblue;
+}
+
+/**
+ * Interface
+ */
+.interface
+{
+  align-items: center;
+  background: goldenrod;
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: opacity .5s ease-out;
+}
+
+.interface.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.interface__inner {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  height: 40%;
+  justify-content: center;
+  width: 100%;
+}
+
+.interface__heading__title {
+  font-size: 48px;
+  text-align: center;
+}
+
+.interface__heading__caption {
+  display: block;
+  font-size: 32px;
+  text-align: center;
+}
+
+.interface__actions {
+  display: flex;
+  justify-content: center;
+}
+.interface__actions > * + * {
+  margin-left: 20px;
+}
+
+.interface__action {
+  border-radius: 10px;
+  outline: none;
+  border-radius: 1px solid black;
+  padding: 10px 20px;
+  pointer-events: all;
+}
+
+.interface__action:hover {
+  cursor: pointer;
+}
